@@ -1,0 +1,8 @@
+<h1>Liste de Courses</h1>
+<ul>
+  <li *ngFor="let course of courseList" [ngClass]="{'course-list': course.isNotForgotten}">
+    <span [ngStyle]="{backgroundColor: course.isNotForgotten ? 'green' : ''}">
+      {{course.name}}
+    </span>
+  </li>
+</ul>

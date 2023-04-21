@@ -1,0 +1,20 @@
+<h1>Bienvenue sur Disney+</h1>
+
+<button (click)="toggleAdmin()" type="button">Admin / User</button>
+
+<p>Vos informations:</p>
+
+<section *ngIf="user.isAdmin">{{ user.firstname}} {{user.lastname}} est premium
+  <ul>
+    <li *ngFor="let serie of series">
+      {{serie}}
+    </li>
+  </ul>
+</section>
+
+<section *ngIf="!user.isAdmin">
+  <p>
+    Vous ne pouvez regarder que 20 épisodes.
+  </p>
+  <p>Veuillez vous abonner pour un visionnage illimité !</p>
+</section>

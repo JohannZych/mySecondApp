@@ -1,0 +1,12 @@
+<div class="card-container">
+  <img [src]="user.image" [alt]="user.firstname">
+  <h1>{{user.firstname}} {{user.lastname}}</h1>
+  <p class="card-age">{{user.age}}</p>
+
+  <input type="text" [(ngModel)]="quote">
+  <p>{{quote}}</p>
+
+  <button (click)="alertMessage()">A toi de jouer !</button>
+
+</div>
+
