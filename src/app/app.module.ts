@@ -7,13 +7,15 @@ import {FormsModule} from "@angular/forms";
 import { CardComponent } from './card/card.component';
 import { CourseListComponent } from './course-list/course-list.component';
 import { SeriesComponent } from './series/series.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     CourseListComponent,
-    SeriesComponent
+    SeriesComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,

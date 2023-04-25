@@ -4,7 +4,9 @@
 
 <p>Vos informations:</p>
 
-<section *ngIf="user.isAdmin">{{ user.firstname}} {{user.lastname}} est premium
+<section *ngIf="user.isAdmin">
+  <p>{{ user.firstname}} {{user.lastname}} est premium</p>
+  <p>Nb de séries vues : {{ user.views }} !</p>
   <ul>
     <li *ngFor="let serie of series">
       {{serie}}

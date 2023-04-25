@@ -1,0 +1,20 @@
+<form (ngSubmit)="myForm.valid && OnSubmit()" #myForm="ngForm">
+
+  <label for="emails">Votre Email</label>
+  <input type="email" name="emails" id="emails" [(ngModel)]="emailUser" #email="ngModel" required email>
+
+  <div *ngIf="email.errors && myForm.submitted">
+    <span *ngIf="email.errors?.['required']">L'email est requis</span>
+    <span *ngIf="email.errors?.['email']">Le type doit être un email</span>
+  </div>
+
+  <label for="pwd">Votre Mot de Passe</label>
+  <input type="password" name="pwd" id="pwd" [(ngModel)]="pwdUser" #pwd="ngModel" required minlength="6">
+
+  <div *ngIf="pwd.errors && myForm.submitted">
+    <span *ngIf="pwd.errors?.['required']">L'email est requis</span>
+    <span *ngIf="pwd.errors?.['minlength']">La longueur minimum est de 6 caractères</span>
+  </div>
+
+  <button type="submit">Envoyer</button>
+</form>
